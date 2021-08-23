@@ -29,8 +29,8 @@ class PokemonAdapter(private val navigate: (Pokemon, Int, String?) -> Unit) :
     ) {
 
     override fun onBindViewHolder(holder: PokemonViewHolder, position: Int) {
-        val data = getItem(position)!!
-        holder.bind(data)
+        val data = getItem(position)
+        data?.let { holder.bind(it) }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonViewHolder {
