@@ -51,9 +51,9 @@ class PokemonStatisticsFragment : Fragment(R.layout.fragment_pokemon_statistics)
         val toolbar = binding.toolbar as Toolbar
         toolbar.elevation = 0.0F
         (activity as AppCompatActivity).setSupportActionBar(toolbar)
-        (activity as AppCompatActivity).supportActionBar!!.title = pokemon?.name?.uppercase()
-        (activity as AppCompatActivity).supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        (activity as AppCompatActivity).supportActionBar!!.setHomeButtonEnabled(true)
+        (activity as AppCompatActivity).supportActionBar?.title = pokemon?.name?.uppercase()
+        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        (activity as AppCompatActivity).supportActionBar?.setHomeButtonEnabled(true)
 
         toolbar.setNavigationOnClickListener {
             binding.root.findNavController().navigateUp()
